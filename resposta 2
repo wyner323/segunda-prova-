@@ -1,0 +1,53 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Leitura do dia de início
+        Console.WriteLine("Digite o início (formato 'Dia X'):");
+        string[] diaInicioInput = Console.ReadLine().Split(' ');
+        int diaInicio = int.Parse(diaInicioInput[1]);
+
+        // Leitura da hora de início
+        Console.WriteLine("Digite o horário de início (formato 'hh:mm:ss'):");
+        string[] horaInicioInput = Console.ReadLine().Split(':');
+        int horaInicio = int.Parse(horaInicioInput[0]);
+        int minutoInicio = int.Parse(horaInicioInput[1]);
+        int segundoInicio = int.Parse(horaInicioInput[2]);
+
+        // Leitura do dia de término
+        Console.WriteLine("Digite o término (formato 'Dia Y'):");
+        string[] diaFimInput = Console.ReadLine().Split(' ');
+        int diaFim = int.Parse(diaFimInput[1]);
+
+        // Leitura da hora de término
+        Console.WriteLine("Digite o horário de término (formato 'hh:mm:ss'):");
+        string[] horaFimInput = Console.ReadLine().Split(':');
+        int horaFim = int.Parse(horaFimInput[0]);
+        int minutoFim = int.Parse(horaFimInput[1]);
+        int segundoFim = int.Parse(horaFimInput[2]);
+
+        // Cálculo do tempo total em segundos
+        int inicioTotalSegundos = (diaInicio * 86400) + (horaInicio * 3600) + (minutoInicio * 60) + segundoInicio;
+        int fimTotalSegundos = (diaFim * 86400) + (horaFim * 3600) + (minutoFim * 60) + segundoFim;
+
+        int duracaoSegundos = fimTotalSegundos - inicioTotalSegundos;
+
+        // Conversão da duração para dias, horas, minutos e segundos
+        int dias = duracaoSegundos / 86400;
+        duracaoSegundos %= 86400;
+
+        int horas = duracaoSegundos / 3600;
+        duracaoSegundos %= 3600;
+
+        int minutos = duracaoSegundos / 60;
+        int segundos = duracaoSegundos % 60;
+
+        // Exibição da duração do evento
+        Console.WriteLine($"{dias} dia(s)");
+        Console.WriteLine($"{horas} hora(s)");
+        Console.WriteLine($"{minutos} minuto(s)");
+        Console.WriteLine($"{segundos} segundo(s)");
+    }
+}

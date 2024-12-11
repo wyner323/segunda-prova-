@@ -1,0 +1,29 @@
+using System; 
+
+class program
+
+string entrada1 =(n1,n2,n3,n4)
+string media (2),(3),(4) e (1)
+string resultado= ("aluno reporvado")
+string ("aluno reprovado")
+string ("Aluno em exame")
+string ("media final")
+
+if { calcular entrada1=(n1,n2,n3,n4)
+    media= (n1+n2+n3=n4 / 4)
+
+}
+
+
+if { exibir entrada ("aluno reprovado")
+   media <= ("5")
+}
+
+if { exibir aluno aprovado("aluno aporvado")
+
+media >=("7")
+}
+
+if { exibir aluno em exame("aluno em exame")
+
+media =<>("5, 7")
